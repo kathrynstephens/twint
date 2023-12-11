@@ -331,10 +331,12 @@ def main():
 
 
 def run_as_command():
-    version = ".".join(str(v) for v in sys.version_info[:2])
-    if float(version) < 3.6:
-        print("[-] TWINT requires Python version 3.6+.")
-        sys.exit(0)
+    major-version = sys.version_info.major
+    minor-version = sys.version_info.minor
+    if major-version <= 3:
+        if minor-version <= 6:
+            print("[-] TWINT requires Python version 3.6+.")
+            sys.exit(0)
 
     main()
 
